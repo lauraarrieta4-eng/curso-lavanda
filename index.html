@@ -332,12 +332,17 @@
     margin-bottom:14px;
   }
   .cta-block p{max-width:48ch;margin:0 auto 28px;color:#463A50;}
+  .cta-actions{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .btn-hotmart,
   .btn-whatsapp{
     display:inline-flex;
     align-items:center;
     gap:10px;
-    background:var(--gold);
-    color:#fff;
     font-family:'Inter', sans-serif;
     font-weight:600;
     font-size:1rem;
@@ -345,9 +350,20 @@
     border-radius:999px;
     text-decoration:none;
     transition:transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-hotmart{
+    background:var(--lavender-deep);
+    color:#fff;
+    box-shadow:0 6px 18px rgba(78,61,110,0.24);
+  }
+  .btn-hotmart:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(78,61,110,0.32);}
+  .btn-whatsapp{
+    background:var(--gold);
+    color:#fff;
     box-shadow:0 6px 18px rgba(176,141,87,0.35);
   }
   .btn-whatsapp:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(176,141,87,0.42);}
+  .btn-hotmart:focus-visible,
   .btn-whatsapp:focus-visible{outline:3px solid var(--lavender);outline-offset:3px;}
 
   footer{
@@ -583,10 +599,15 @@
   <section class="cta-block reveal">
     <span class="eyebrow" style="justify-content:center;">Inscripción</span>
     <h2>¿Empezamos?</h2>
-    <p>Escribime por WhatsApp y coordinamos el camino que prefieras — sin apuro, a tu ritmo.</p>
-    <a class="btn-whatsapp" href="https://wa.me/5492944800443?text=Hola%20Lau!%20Quiero%20info%20para%20anotarme%20al%20curso%20de%20cultivo%20de%20lavanda%20%F0%9F%8C%BF" target="_blank" rel="noopener">
-      Escribime por WhatsApp →
-    </a>
+    <p>Elegí tu acceso directo para inscribirte o comunicate por WhatsApp si tenés dudas o querés consultar algo antes de entrar al club.</p>
+    <div class="cta-actions">
+      <a class="btn-hotmart" href="https://hotmart.com/es/club/amantes-de-las-lavandas" target="_blank" rel="noopener">
+        Entrar al club →
+      </a>
+      <a class="btn-whatsapp" href="https://wa.me/5492944800443?text=Hola%20Lau!%20Quiero%20info%20para%20anotarme%20al%20curso%20de%20cultivo%20de%20lavanda%20%F0%9F%8C%BF" target="_blank" rel="noopener">
+        Consultas por WhatsApp →
+      </a>
+    </div>
   </section>
 
   <footer>
