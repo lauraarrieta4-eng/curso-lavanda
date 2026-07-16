@@ -262,64 +262,67 @@
   }
   .ficha .regalo::before{content:"🎁";font-size:12px;}
 
-  .precios-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:22px;
-    align-items:stretch;
-  }
-  .plan{
+  .pago-flow{
     background:var(--paper);
     border:1px solid var(--line);
     border-radius:6px;
-    padding:30px 26px;
+    padding:36px 34px;
+    max-width:720px;
+    margin:0 auto;
+  }
+  .pago-steps{
     display:flex;
-    flex-direction:column;
+    align-items:center;
+    gap:28px;
   }
-  .plan.plan-b{
-    background:linear-gradient(180deg, var(--lavender-deep), #3E3059);
-    color:var(--cream);
-    border-color:transparent;
+  .pago-step{
+    flex:1;
+    text-align:center;
   }
-  .plan .camino{
+  .pago-step .camino{
     font-family:'Space Mono', monospace;
     font-size:10.5px;
     letter-spacing:0.12em;
     text-transform:uppercase;
     color:var(--sage);
   }
-  .plan-b .camino{color:#C9B8E8;}
-  .plan h3{
-    font-size:1.3rem;
+  .pago-step h3{
+    font-size:1.15rem;
     font-weight:500;
-    margin:10px 0 14px;
+    margin:10px 0 8px;
+    color:var(--lavender-deep);
   }
-  .plan .price{
+  .pago-step .price{
     font-family:'Fraunces', serif;
     font-size:2.1rem;
     font-weight:500;
-    margin:6px 0 4px;
+    margin:4px 0;
+    color:var(--ink);
   }
-  .plan .price-sub{
+  .pago-step .price-sub{
     font-size:0.85rem;
     color:#6B5F76;
-    margin-bottom:18px;
   }
-  .plan-b .price-sub{color:#D8CCEC;}
-  .plan p.desc{
+  .pago-arrow{
+    font-family:'Space Mono', monospace;
+    font-size:1.6rem;
+    color:var(--lavender-deep);
+    flex-shrink:0;
+  }
+  .pago-desc{
+    text-align:center;
     font-size:0.94rem;
     color:#5A4E64;
-    margin:0 0 18px;
-    flex-grow:1;
-  }
-  .plan-b p.desc{color:#E3D9F2;}
-  .plan .note{
-    font-size:0.86rem;
-    padding-top:14px;
+    margin:24px 0 0;
+    padding-top:20px;
     border-top:1px solid var(--line);
-    color:#6B5F76;
   }
-  .plan-b .note{border-top:1px solid rgba(255,255,255,0.18);color:#C9B8E8;}
+  .pago-note{
+    text-align:center;
+    font-size:0.88rem;
+    color:#6B5F76;
+    margin-top:10px;
+  }
 
   .cta-block{
     text-align:center;
@@ -402,7 +405,8 @@
     .instructora-fotos{max-width:320px;margin:0 auto 44px;}
     .foto-clase{right:-14px;bottom:-20px;}
     .modalidad-grid{grid-template-columns:1fr;}
-    .precios-grid{grid-template-columns:1fr;}
+    .pago-steps{flex-direction:column;gap:16px;}
+    .pago-arrow{transform:rotate(90deg);}
     .ficha{grid-template-columns:56px 1fr;gap:16px;}
     .ficha .num .big{font-size:1.6rem;}
   }
@@ -572,28 +576,28 @@
   <section class="divider-top reveal">
     <div class="section-head">
       <span class="eyebrow">Inversión</span>
-      <h2>Dos caminos para empezar</h2>
-      <p>Elegí el que te haga sentido: probar primero con la Ficha 01, o arrancar con el curso completo — en los dos casos, los módulos se habilitan uno por semana.</p>
+      <h2>Empezás con el Módulo 1</h2>
+      <p>Cursás la Ficha 01 y decidís con calma si seguís con el resto del programa. En los dos pasos, los módulos se habilitan uno por semana.</p>
     </div>
-    <div class="precios-grid">
-      <div class="plan">
-        <span class="camino">Camino A</span>
-        <h3>Empezá con el Módulo 1</h3>
-        <div class="price">$12.000</div>
-        <div class="price-sub">Pago único</div>
-        <p class="desc">Cursás el Módulo 1 — Introducción general — y decidís con calma si seguís con el resto del programa.</p>
-        <div class="note">Si continuás después: el resto del curso (Módulos 2 a 6 + 2 clases de consulta) sale $73.000, en 2 cuotas de $36.500.</div>
+    <div class="pago-flow">
+      <div class="pago-steps">
+        <div class="pago-step">
+          <span class="camino">Paso 1</span>
+          <h3>Módulo 1</h3>
+          <div class="price">$12.000</div>
+          <div class="price-sub">Pago único</div>
+        </div>
+        <div class="pago-arrow">→</div>
+        <div class="pago-step">
+          <span class="camino">Si seguís</span>
+          <h3>Resto del curso</h3>
+          <div class="price">$73.000</div>
+          <div class="price-sub">Módulos 2 a 6 + 2 consultas</div>
+        </div>
       </div>
-      <div class="plan plan-b">
-        <span class="camino">Camino B</span>
-        <h3>El curso completo, pago único</h3>
-        <div class="price">$85.000</div>
-        <div class="price-sub">Pago único</div>
-        <p class="desc">Los 6 módulos completos más las 2 clases de consulta en vivo — pagás el curso completo de una vez, y las clases se van habilitando una por semana en el Área de Miembros — más de regalo mi guía con +40 descripciones de especies y variedades.</p>
-        <div class="note">Pagás todo el curso ahora; el contenido se libera de a un módulo por semana, igual que en el Camino A.</div>
-      </div>
+      <p class="pago-desc">Los 6 módulos completos más las 2 clases de consulta en vivo — más de regalo mi guía con +40 descripciones de especies y variedades.</p>
+      <p class="pago-note">El resto del curso también se puede pagar en 2 cuotas de $36.500. Total del recorrido completo: $85.000. Se acepta Mercado Pago y PayPal.</p>
     </div>
-    <p style="text-align:center;margin-top:22px;font-size:0.9rem;color:#6B5F76;">Se acepta Mercado Pago y PayPal.</p>
   </section>
 
   <section class="cta-block reveal">
