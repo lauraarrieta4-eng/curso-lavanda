@@ -1,0 +1,208 @@
+<!-- ============================================================
+     MINI LANDING — Módulo de Propagación (esquejes) / Primavera
+     Sección independiente para pegar en el sitio de Xilema.
+     Los estilos están scopeados bajo .xi-prop-section para no
+     pisar el CSS del resto de la página.
+     ============================================================ -->
+
+<section class="xi-prop-section">
+  <style>
+    .xi-prop-section {
+      --xi-lavanda: #5b4b8a;
+      --xi-lila: #c9b8e8;
+      --xi-salvia: #7c8f63;
+      --xi-crema: #f7f4ee;
+      --xi-carbon: #2b2620;
+      --xi-borde: #e4ddd0;
+
+      font-family: 'Karla', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--xi-crema);
+      color: var(--xi-carbon);
+      padding: 4rem 1.5rem;
+      box-sizing: border-box;
+    }
+
+    .xi-prop-section * { box-sizing: border-box; }
+
+    .xi-prop-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .xi-prop-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--xi-salvia);
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+
+    .xi-prop-eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--xi-salvia);
+    }
+
+    .xi-prop-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.9rem, 4.5vw, 2.9rem);
+      line-height: 1.15;
+      margin: 0 0 1.1rem;
+      color: var(--xi-lavanda);
+    }
+
+    .xi-prop-title em {
+      font-style: italic;
+      color: var(--xi-carbon);
+    }
+
+    .xi-prop-sub {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #55503f;
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .xi-prop-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      text-align: left;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 560px) {
+      .xi-prop-cards { grid-template-columns: 1fr; }
+    }
+
+    .xi-prop-card {
+      background: #fff;
+      border: 1px solid var(--xi-borde);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+    }
+
+    .xi-prop-card h3 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1rem;
+      margin: 0 0 0.4rem;
+      color: var(--xi-lavanda);
+    }
+
+    .xi-prop-card p {
+      font-size: 0.92rem;
+      line-height: 1.5;
+      margin: 0;
+      color: #55503f;
+    }
+
+    .xi-prop-offer {
+      background: #fff;
+      border: 1px solid var(--xi-borde);
+      border-radius: 14px;
+      padding: 2rem 1.75rem;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .xi-prop-offer-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--xi-salvia);
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .xi-prop-offer-name {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.4rem;
+      color: var(--xi-carbon);
+      margin: 0 0 0.6rem;
+    }
+
+    .xi-prop-offer-price {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 2.2rem;
+      color: var(--xi-lavanda);
+      margin: 0 0 1.4rem;
+    }
+
+    .xi-prop-offer-price span {
+      font-size: 0.95rem;
+      font-family: 'Karla', sans-serif;
+      color: #8a8471;
+      font-weight: 400;
+    }
+
+    .xi-prop-cta {
+      display: inline-block;
+      width: 100%;
+      background: var(--xi-lavanda);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.95rem 1.5rem;
+      border-radius: 8px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .xi-prop-cta:hover {
+      background: #4a3d73;
+      transform: translateY(-1px);
+    }
+
+    .xi-prop-note {
+      font-size: 0.82rem;
+      color: #8a8471;
+      margin-top: 0.9rem;
+    }
+  </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500&family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+  <div class="xi-prop-inner">
+    <span class="xi-prop-eyebrow">Antes de que llegue la primavera</span>
+
+    <h1 class="xi-prop-title">Es época de hacer <em>esquejes</em> de lavanda</h1>
+
+    <p class="xi-prop-sub">
+      Los próximos meses son la ventana ideal para propagar tus plantas. Es también donde más gente falla:
+      corte en el punto equivocado, exceso o falta de humedad, sustrato que pudre la base antes de enraizar.
+      El Módulo 4 te lleva paso a paso por todo el proceso, con los tiempos y condiciones para tu zona.
+    </p>
+
+    <div class="xi-prop-cards">
+      <div class="xi-prop-card">
+        <h3>Qué incluye</h3>
+        <p>Presentación narrada con los métodos de propagación, épocas y técnicas de enraizamiento, PDF de apoyo, y video práctico de la técnica de enraizamiento.</p>
+      </div>
+      <div class="xi-prop-card">
+        <h3>Para quién es</h3>
+        <p>Si querés multiplicar tus propias plantas de lavanda con buen porcentaje de prendimiento, sin perder la temporada por prueba y error.</p>
+      </div>
+    </div>
+
+    <div class="xi-prop-offer">
+      <div class="xi-prop-offer-label">Módulo 4</div>
+      <p class="xi-prop-offer-name">Propagación y reproducción</p>
+      <p class="xi-prop-offer-price">$20.000 <span>/ pago único</span></p>
+      <a class="xi-prop-cta" href="https://forms.gle/GcpDHgUaftxMhcFy8" target="_blank" rel="noopener">
+        Quiero el módulo de Propagación →
+      </a>
+      <p class="xi-prop-note">En el formulario elegís "Módulo 4 — Propagación" al inscribirte.</p>
+    </div>
+  </div>
+</section>
